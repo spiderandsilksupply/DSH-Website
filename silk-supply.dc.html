@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  html, body { margin:0; padding:0; background:#0B0B0C; }
+  ::selection { background:#B8860B; color:#0B0B0C; }
+</style>
+</helmet>
+<div style="background:#0C0B09; color:#FFFFF0; font-family:'Jost',sans-serif; overflow-x:hidden;">
+  <dc-import name="Header" active="projects" hint-size="100%,84px"></dc-import>
+
+  <!-- ===================== HERO ===================== -->
+  <section data-screen-label="Silk Supply Hero" style="position:relative; min-height:78vh; display:flex; align-items:flex-end; background:linear-gradient(180deg, rgba(12,11,9,0.7) 0%, rgba(12,11,9,0.4) 40%, rgba(12,11,9,0.97) 100%), url(https://images.unsplash.com/photo-1508858350251-aeda41314e22?fm=jpg&q=80&w=2200&auto=format&fit=crop); background-size:cover; background-position:center;">
+    <div style="max-width:1180px; width:100%; margin:0 auto; padding:0 44px 90px;">
+      <p style="margin:0 0 16px; font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:#C9B98F;">Projects &mdash; Silk Supply</p>
+      <div style="width:56px; height:2px; background:#B8860B; margin-bottom:28px;"></div>
+      <h1 style="margin:0 0 24px; font-family:'Cormorant Garamond',serif; font-weight:400; font-size:62px; line-height:1.08; color:#FFFFF0; max-width:18ch;">The infrastructure that makes everything possible</h1>
+      <p style="margin:0; font-size:18px; line-height:1.7; color:rgba(255,255,240,0.74); max-width:62ch;">A managed spider farm, a controlled fibre-production process, and a supply model built to serve both research-grade and commercial demand.</p>
+    </div>
+  </section>
+
+  <!-- ===================== THE PROBLEM & SOLUTION ===================== -->
+  <section style="background:#0C0B09; padding:116px 44px; border-top:1px solid rgba(255,255,255,0.06);">
+    <div style="max-width:1180px; margin:0 auto; display:grid; grid-template-columns:0.85fr 1.15fr; gap:80px; align-items:start;">
+      <div data-reveal="dsh" data-reveal-i="0">
+        <p style="margin:0 0 16px; font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:#B8860B;">The Problem &amp; The Solution</p>
+        <div style="width:56px; height:2px; background:#B8860B; margin-bottom:26px;"></div>
+        <h2 style="margin:0; font-family:'Cormorant Garamond',serif; font-weight:400; font-size:42px; line-height:1.16; color:#FFFFF0;">Why spider silk stayed a legend &mdash; until now</h2>
+      </div>
+      <div data-reveal="dsh" data-reveal-i="1">
+        <p style="margin:0 0 22px; font-size:17px; line-height:1.8; color:rgba(255,255,240,0.72);">Spider silk has been known as a wonder material for decades. Commercialisation stalled on a single, stubborn fact: spiders are territorial and cannibalistic, which makes conventional farming &mdash; housing them together like silkworms &mdash; impossible.</p>
+        <p style="margin:0; font-size:17px; line-height:1.8; color:rgba(255,255,240,0.72);">Our farm solves it. Carefully managed individual housing, controlled environments, and optimised silk-extraction protocols produce fibre at a scale sufficient for both research and initial commercial applications. This is genuinely novel &mdash; and we build it with pride.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== THE FARM ===================== -->
+  <section style="background:#100E0A; padding:0; border-top:1px solid rgba(255,255,255,0.06);">
+    <div style="display:grid; grid-template-columns:1fr 1fr; align-items:stretch;">
+      <div data-reveal="dsh" data-reveal-i="0" style="min-height:560px; background:url(https://images.unsplash.com/photo-1591389703635-e15a07b842d7?fm=jpg&q=80&w=1300&auto=format&fit=crop); background-size:cover; background-position:center;"></div>
+      <div style="padding:96px 64px; display:flex; flex-direction:column; justify-content:center;" data-reveal="dsh" data-reveal-i="1">
+        <p style="margin:0 0 16px; font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:#B8860B;">The Farm</p>
+        <div style="width:56px; height:2px; background:#B8860B; margin-bottom:24px;"></div>
+        <h2 style="margin:0 0 26px; font-family:'Cormorant Garamond',serif; font-weight:400; font-size:40px; line-height:1.12; color:#FFFFF0;">Scale, care, and deliberateness</h2>
+        <div style="display:grid; gap:1px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.08);">
+          <div style="background:#100E0A; padding:24px 28px;">
+            <h3 style="margin:0 0 7px; font-size:14px; letter-spacing:0.1em; color:#E2C268;">The species</h3>
+            <p style="margin:0; font-size:14px; line-height:1.7; color:rgba(255,255,240,0.6);">Orb-weavers of the <em style="font-style:italic;">Nephila</em> family, prized for the exceptional strength and lustre of their dragline silk.</p>
+          </div>
+          <div style="background:#100E0A; padding:24px 28px;">
+            <h3 style="margin:0 0 7px; font-size:14px; letter-spacing:0.1em; color:#E2C268;">Housing &amp; environment</h3>
+            <p style="margin:0; font-size:14px; line-height:1.7; color:rgba(255,255,240,0.6);">Individually housed in climate-controlled conditions that respect their solitary nature and keep each spider healthy.</p>
+          </div>
+          <div style="background:#100E0A; padding:24px 28px;">
+            <h3 style="margin:0 0 7px; font-size:14px; letter-spacing:0.1em; color:#E2C268;">Extraction &amp; quality control</h3>
+            <p style="margin:0; font-size:14px; line-height:1.7; color:rgba(255,255,240,0.6);">Gentle, controlled silking protocols with fibre graded and logged at the point of harvest for full traceability.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FIBER PROPERTIES ===================== -->
+  <section style="background:#0C0B09; padding:116px 44px; border-top:1px solid rgba(255,255,255,0.06);">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div style="text-align:center; margin-bottom:60px;" data-reveal="dsh" data-reveal-i="0">
+        <p style="margin:0 0 16px; font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:#B8860B;">Fibre Properties</p>
+        <div style="width:56px; height:2px; background:#B8860B; margin:0 auto 24px;"></div>
+        <h2 style="margin:0; font-family:'Cormorant Garamond',serif; font-weight:400; font-size:42px; color:#FFFFF0;">The data behind the material</h2>
+      </div>
+      <!-- comparison bars -->
+      <div data-reveal="dsh" data-reveal-i="1" style="background:#100E0A; border:1px solid rgba(255,255,255,0.08); border-radius:4px; padding:44px 48px; margin-bottom:22px;">
+        <p style="margin:0 0 30px; font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:rgba(255,255,240,0.55);">Tensile strength &mdash; relative comparison</p>
+        <sc-for list="{{ bars }}" as="b" hint-placeholder-count="4">
+          <div style="margin-bottom:24px;">
+            <div style="display:flex; justify-content:space-between; margin-bottom:9px;">
+              <span style="font-size:14px; color:#FFFFF0;">{{ b.name }}</span>
+              <span style="font-size:13px; color:rgba(255,255,240,0.55);">{{ b.value }}</span>
+            </div>
+            <div style="height:9px; background:rgba(255,255,255,0.06); border-radius:5px; overflow:hidden;">
+              <div style="height:100%; width:{{ b.pct }}; background:{{ b.color }}; border-radius:5px;"></div>
+            </div>
+          </div>
+        </sc-for>
+        <p style="margin:18px 0 0; font-size:12px; color:rgba(255,255,240,0.4);">Indicative figures for illustration; precise values depend on processing and test method.</p>
+      </div>
+      <!-- spec table -->
+      <div data-reveal="dsh" data-reveal-i="2" style="display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.08);">
+        <div style="background:#100E0A; padding:34px 28px;">
+          <p style="margin:0 0 8px; font-family:'Cormorant Garamond',serif; font-size:38px; color:#E2C268;">~1.1<span style="font-size:18px; color:rgba(255,255,240,0.5);"> GPa</span></p>
+          <p style="margin:0; font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,240,0.55);">Tensile strength</p>
+        </div>
+        <div style="background:#100E0A; padding:34px 28px;">
+          <p style="margin:0 0 8px; font-family:'Cormorant Garamond',serif; font-size:38px; color:#E2C268;">~30<span style="font-size:18px; color:rgba(255,255,240,0.5);"> %</span></p>
+          <p style="margin:0; font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,240,0.55);">Elongation at break</p>
+        </div>
+        <div style="background:#100E0A; padding:34px 28px;">
+          <p style="margin:0 0 8px; font-family:'Cormorant Garamond',serif; font-size:38px; color:#E2C268;">3&ndash;5<span style="font-size:18px; color:rgba(255,255,240,0.5);"> &micro;m</span></p>
+          <p style="margin:0; font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,240,0.55);">Fibre diameter</p>
+        </div>
+        <div style="background:#100E0A; padding:34px 28px;">
+          <p style="margin:0 0 8px; font-family:'Cormorant Garamond',serif; font-size:38px; color:#E2C268;">High</p>
+          <p style="margin:0; font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,240,0.55);">Biocompatibility</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SUPPLY MODEL ===================== -->
+  <section style="background:#100E0A; padding:110px 44px; border-top:1px solid rgba(255,255,255,0.06);">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div style="text-align:center; margin-bottom:60px;" data-reveal="dsh" data-reveal-i="0">
+        <p style="margin:0 0 16px; font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:#B8860B;">The Supply Model</p>
+        <div style="width:56px; height:2px; background:#B8860B; margin:0 auto 24px;"></div>
+        <h2 style="margin:0 auto; font-family:'Cormorant Garamond',serif; font-weight:400; font-size:42px; line-height:1.14; color:#FFFFF0; max-width:24ch;">One fibre, two specifications</h2>
+      </div>
+      <p style="margin:0 auto 50px; max-width:70ch; text-align:center; font-size:16px; line-height:1.8; color:rgba(255,255,240,0.68);" data-reveal="dsh" data-reveal-i="1">From the farm, raw fibre is reeled and twisted, then routed down one of two processing paths &mdash; because medical and textile applications demand very different specifications, and the production process adapts accordingly.</p>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:22px;">
+        <div data-reveal="dsh" data-reveal-i="2" style="background:#0C0B09; border:1px solid rgba(159,195,232,0.28); border-radius:4px; padding:40px 38px;">
+          <p style="margin:0 0 8px; font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:#9FC3E8;">Path A</p>
+          <h3 style="margin:0 0 18px; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:26px; color:#FFFFF0;">Medical grade</h3>
+          <p style="margin:0; font-size:15px; line-height:1.75; color:rgba(255,255,240,0.62);">Reeling &rarr; twisting &rarr; <strong style="color:#FFFFF0; font-weight:500;">sterilisation</strong> &rarr; scaffold or conduit fabrication. Held to medical-device specifications with full lot traceability.</p>
+        </div>
+        <div data-reveal="dsh" data-reveal-i="3" style="background:#0C0B09; border:1px solid rgba(226,194,104,0.28); border-radius:4px; padding:40px 38px;">
+          <p style="margin:0 0 8px; font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:#E2C268;">Path B</p>
+          <h3 style="margin:0 0 18px; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:26px; color:#FFFFF0;">Textile grade</h3>
+          <p style="margin:0; font-size:15px; line-height:1.75; color:rgba(255,255,240,0.62);">Reeling &rarr; twisting &rarr; <strong style="color:#FFFFF0; font-weight:500;">textile treatment</strong> &rarr; weaving or construction. Tuned for hand, sheen, and drape at couture standard.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PARTNERSHIP & LICENSING ===================== -->
+  <section style="position:relative; background:linear-gradient(180deg, rgba(12,11,9,0.84), rgba(12,11,9,0.93)), url(https://images.unsplash.com/photo-1508858350251-aeda41314e22?fm=jpg&q=80&w=1800&auto=format&fit=crop); background-size:cover; background-position:center; padding:110px 44px;">
+    <div style="max-width:840px; margin:0 auto; text-align:center;">
+      <p style="margin:0 0 16px; font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:#E2C268;">Partnership &amp; Licensing</p>
+      <h2 style="margin:0 0 22px; font-family:'Cormorant Garamond',serif; font-weight:400; font-size:44px; line-height:1.12; color:#FFFFF0;">Source the world's rarest fibre</h2>
+      <p style="margin:0 0 38px; font-size:16px; line-height:1.75; color:rgba(255,255,240,0.7);">For research institutions seeking supply agreements, fashion brands exploring sustainable alternatives, and medical-device companies looking for a material source &mdash; we structure supply and licensing to fit the application.</p>
+      <a href="mailto:supply@dubaisilkholdings.com" style="display:inline-block; text-decoration:none; font-size:13px; letter-spacing:0.18em; text-transform:uppercase; color:#2A1E02; background:#B8860B; padding:16px 34px; border-radius:2px; transition:background 240ms;" style-hover="background:#C99A1F;">Supply &amp; licensing inquiries</a>
+    </div>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,560px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    const els = Array.from(document.querySelectorAll('[data-reveal="dsh"]'));
+    els.forEach(e => {
+      e.style.opacity = '0';
+      e.style.transform = 'translateY(24px)';
+      e.style.transition = 'opacity 760ms cubic-bezier(0.22,0.61,0.36,1), transform 760ms cubic-bezier(0.22,0.61,0.36,1)';
+    });
+    const show = (e) => { e.style.opacity = '1'; e.style.transform = 'none'; };
+    if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      els.forEach(show); return;
+    }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(en => {
+        if (en.isIntersecting) {
+          const i = Number(en.target.getAttribute('data-reveal-i') || 0);
+          en.target.style.transitionDelay = (i * 85) + 'ms';
+          show(en.target); io.unobserve(en.target);
+        }
+      });
+    }, { threshold: 0.14 });
+    els.forEach(e => io.observe(e));
+    this._fallback = setTimeout(() => els.forEach(show), 1800);
+  }
+  componentWillUnmount() { if (this._fallback) clearTimeout(this._fallback); }
+  renderVals() {
+    return {
+      bars: [
+        { name:'Spider silk (dragline)', value:'~1.1 GPa', pct:'74%', color:'linear-gradient(90deg,#B8860B,#E2C268)' },
+        { name:'High-tensile steel', value:'~1.5 GPa', pct:'100%', color:'rgba(255,255,240,0.55)' },
+        { name:'Kevlar', value:'~3.6 GPa (denser)', pct:'88%', color:'rgba(159,195,232,0.6)' },
+        { name:'Nylon', value:'~0.07 GPa', pct:'14%', color:'rgba(255,255,240,0.3)' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

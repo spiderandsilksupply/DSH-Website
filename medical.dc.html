@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  html, body { margin:0; padding:0; background:#0B0B0C; }
+  ::selection { background:#9FC3E8; color:#0B0B0C; }
+</style>
+</helmet>
+<div style="background:#0A0E14; color:#FFFFF0; font-family:'Jost',sans-serif; overflow-x:hidden;">
+  <dc-import name="Header" active="projects" hint-size="100%,84px"></dc-import>
+
+  <!-- ===================== HERO ===================== -->
+  <section data-screen-label="Medical Hero" style="position:relative; min-height:70vh; display:flex; align-items:flex-end; background:linear-gradient(180deg, rgba(8,13,22,0.78) 0%, rgba(8,13,22,0.5) 40%, rgba(8,13,22,0.97) 100%), url(https://images.unsplash.com/photo-1631549916768-4119b2e5f926?fm=jpg&q=80&w=2200&auto=format&fit=crop); background-size:cover; background-position:center;">
+    <div style="max-width:1180px; width:100%; margin:0 auto; padding:0 44px 90px;">
+      <p style="margin:0 0 16px; font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:#9FC3E8;">Projects &mdash; Medical</p>
+      <div style="width:56px; height:2px; background:#9FC3E8; margin-bottom:28px;"></div>
+      <h1 style="margin:0 0 24px; font-family:'Cormorant Garamond',serif; font-weight:400; font-size:62px; line-height:1.08; color:#FFFFF0; max-width:18ch;">A fibre the body accepts &mdash; then rebuilds around</h1>
+      <p style="margin:0; font-size:18px; line-height:1.7; color:rgba(255,255,240,0.74); max-width:62ch;">Two active programmes apply natural spider silk to problems where today's materials fall short: anterior cruciate ligament reconstruction, and peripheral nerve repair.</p>
+    </div>
+  </section>
+
+  <!-- ===================== ACL SCAFFOLD ===================== -->
+  <section style="background:#0A0E14; padding:110px 44px; border-top:1px solid rgba(255,255,255,0.06);">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:70px; align-items:start; margin-bottom:64px;">
+        <div data-reveal="dsh" data-reveal-i="0">
+          <p style="margin:0 0 16px; font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:#9FC3E8;">Programme 01</p>
+          <h2 style="margin:0 0 24px; font-family:'Cormorant Garamond',serif; font-weight:400; font-size:44px; line-height:1.12; color:#FFFFF0;">The ACL scaffold</h2>
+          <p style="margin:0 0 20px; font-size:16px; line-height:1.8; color:rgba(255,255,240,0.72);"><strong style="color:#FFFFF0; font-weight:500;">The clinical problem.</strong> Anterior cruciate ligament injuries affect millions of people every year. Current reconstruction relies on autografts &mdash; harvesting the patient's own tendon &mdash; or synthetic materials, each with real limitations in donor-site morbidity, integration, and long-term durability.</p>
+          <p style="margin:0; font-size:16px; line-height:1.8; color:rgba(255,255,240,0.72);"><strong style="color:#FFFFF0; font-weight:500;">The candidate material.</strong> Spider silk's tensile strength exceeds most synthetics, it is biocompatible, and it degrades predictably as the body builds new tissue around it. Critically, it can be fabricated into scaffold geometries that mimic the fibre architecture of a native ligament.</p>
+        </div>
+        <div data-reveal="dsh" data-reveal-i="1" style="position:relative; border:1px solid rgba(159,195,232,0.2); border-radius:4px; overflow:hidden; background:#0C121C; min-height:380px; display:flex; align-items:center; justify-content:center;">
+          <!-- Minimal scaffold concept diagram -->
+          <svg viewBox="0 0 360 380" width="100%" height="100%" style="display:block; max-width:340px;">
+            <text x="180" y="34" text-anchor="middle" fill="#9FC3E8" font-family="Jost" font-size="11" letter-spacing="2" style="text-transform:uppercase;">SCAFFOLD CONCEPT</text>
+            <g stroke="#9FC3E8" stroke-width="1.4" fill="none" opacity="0.85">
+              <path d="M70 70 C 110 150, 110 230, 70 310"></path>
+              <path d="M110 70 C 150 150, 150 230, 110 310"></path>
+              <path d="M150 70 C 190 150, 190 230, 150 310"></path>
+              <path d="M190 70 C 150 150, 150 230, 190 310"></path>
+              <path d="M230 70 C 190 150, 190 230, 230 310"></path>
+              <path d="M270 70 C 230 150, 230 230, 270 310"></path>
+            </g>
+            <ellipse cx="170" cy="70" rx="120" ry="18" fill="none" stroke="#E2C268" stroke-width="1.4" opacity="0.7"></ellipse>
+            <ellipse cx="170" cy="310" rx="120" ry="18" fill="none" stroke="#E2C268" stroke-width="1.4" opacity="0.7"></ellipse>
+            <text x="180" y="350" text-anchor="middle" fill="rgba(255,255,240,0.5)" font-family="Jost" font-size="11">Braided silk bundles anchored bone-to-bone</text>
+          </svg>
+        </div>
+      </div>
+      <div data-reveal="dsh" data-reveal-i="2" style="background:#0C121C; border:1px solid rgba(255,255,255,0.07); border-radius:4px; padding:38px 40px;">
+        <p style="margin:0 0 16px; font-size:12px; letter-spacing:0.22em; text-transform:uppercase; color:#9FC3E8;">Where the research stands</p>
+        <p style="margin:0; font-size:16px; line-height:1.8; color:rgba(255,255,240,0.7);">The programme is in the <strong style="color:#FFFFF0; font-weight:500;">feasibility-study phase</strong> with the research team, establishing scaffold fabrication and mechanical characterisation against native-ligament benchmarks. Key milestones to date include material selection and braiding geometry; the next steps move toward in&nbsp;vivo testing.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== NERVE CONDUIT ===================== -->
+  <section style="background:#080C12; padding:110px 44px; border-top:1px solid rgba(255,255,255,0.06);">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:70px; align-items:start;">
+        <div data-reveal="dsh" data-reveal-i="1" style="position:relative; border:1px solid rgba(159,195,232,0.2); border-radius:4px; overflow:hidden; background:#0C121C; min-height:380px; display:flex; align-items:center; justify-content:center; order:0;">
+          <svg viewBox="0 0 360 380" width="100%" height="100%" style="display:block; max-width:340px;">
+            <text x="180" y="34" text-anchor="middle" fill="#9FC3E8" font-family="Jost" font-size="11" letter-spacing="2">NERVE CONDUIT</text>
+            <g opacity="0.9">
+              <ellipse cx="80" cy="190" rx="22" ry="46" fill="none" stroke="#E2C268" stroke-width="1.6"></ellipse>
+              <ellipse cx="280" cy="190" rx="22" ry="46" fill="none" stroke="#E2C268" stroke-width="1.6"></ellipse>
+              <path d="M80 150 C 150 150, 210 150, 280 150" stroke="#9FC3E8" stroke-width="1.4" fill="none"></path>
+              <path d="M80 230 C 150 230, 210 230, 280 230" stroke="#9FC3E8" stroke-width="1.4" fill="none"></path>
+              <g stroke="#9FC3E8" stroke-width="0.9" opacity="0.5">
+                <line x1="110" y1="150" x2="110" y2="230"></line>
+                <line x1="140" y1="150" x2="140" y2="230"></line>
+                <line x1="170" y1="150" x2="170" y2="230"></line>
+                <line x1="200" y1="150" x2="200" y2="230"></line>
+                <line x1="230" y1="150" x2="230" y2="230"></line>
+              </g>
+              <path d="M95 190 L 265 190" stroke="#E2C268" stroke-width="1.4" stroke-dasharray="4 5" opacity="0.85"></path>
+            </g>
+            <text x="180" y="350" text-anchor="middle" fill="rgba(255,255,240,0.5)" font-family="Jost" font-size="11">Tubular silk architecture bridges the gap</text>
+          </svg>
+        </div>
+        <div data-reveal="dsh" data-reveal-i="0">
+          <p style="margin:0 0 16px; font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:#9FC3E8;">Programme 02</p>
+          <h2 style="margin:0 0 24px; font-family:'Cormorant Garamond',serif; font-weight:400; font-size:44px; line-height:1.12; color:#FFFFF0;">The nerve conduit</h2>
+          <p style="margin:0 0 20px; font-size:16px; line-height:1.8; color:rgba(255,255,240,0.72);"><strong style="color:#FFFFF0; font-weight:500;">The clinical problem.</strong> Peripheral nerve injuries often cause permanent loss of function, because the body's natural regeneration capacity is limited over longer gaps. A nerve conduit bridges that gap and guides axonal regrowth across it.</p>
+          <p style="margin:0 0 20px; font-size:16px; line-height:1.8; color:rgba(255,255,240,0.72);"><strong style="color:#FFFFF0; font-weight:500;">The rationale.</strong> Spider silk can be spun into tubular architectures with controlled porosity and surface chemistry that supports Schwann-cell adhesion &mdash; the cellular scaffolding that healthy nerve regrowth depends on.</p>
+          <p style="margin:0; font-size:16px; line-height:1.8; color:rgba(255,255,240,0.72);"><strong style="color:#FFFFF0; font-weight:500;">Stage &amp; pathway.</strong> The work is at the early scientific-investigation stage, conducted with academic partners. The regulatory pathway follows the established route for resorbable nerve-repair devices, staged from pre-clinical evidence toward first-in-human study.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== RESEARCH PARTNERS ===================== -->
+  <section style="background:#0A0E14; padding:104px 44px; border-top:1px solid rgba(255,255,255,0.06);">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div style="margin-bottom:52px;" data-reveal="dsh" data-reveal-i="0">
+        <p style="margin:0 0 16px; font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:#9FC3E8;">Research Collaboration</p>
+        <div style="width:56px; height:2px; background:#9FC3E8; margin-bottom:24px;"></div>
+        <h2 style="margin:0; font-family:'Cormorant Garamond',serif; font-weight:400; font-size:40px; color:#FFFFF0; max-width:24ch;">The people and institutions involved</h2>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.08);">
+        <div style="background:#0A0E14; padding:38px 34px;" data-reveal="dsh" data-reveal-i="1">
+          <h3 style="margin:0 0 6px; font-family:'Cormorant Garamond',serif; font-weight:600; font-size:23px; color:#FFFFF0;">Dr. Nupur Kohli</h3>
+          <p style="margin:0 0 14px; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:#9FC3E8;">Biomaterials &amp; Tissue Engineering</p>
+          <p style="margin:0; font-size:14px; line-height:1.7; color:rgba(255,255,240,0.58);">Research collaboration on the biocompatibility and tissue-integration behaviour of silk-based scaffolds.</p>
+        </div>
+        <div style="background:#0A0E14; padding:38px 34px;" data-reveal="dsh" data-reveal-i="2">
+          <h3 style="margin:0 0 6px; font-family:'Cormorant Garamond',serif; font-weight:600; font-size:23px; color:#FFFFF0;">Dr. Gundula Schulze-Tanzil</h3>
+          <p style="margin:0 0 14px; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:#9FC3E8;">Orthopaedic Research</p>
+          <p style="margin:0; font-size:14px; line-height:1.7; color:rgba(255,255,240,0.58);">Research collaboration on the ACL programme, with affiliations spanning the Charit&eacute; and the OARSI orthopaedic-research community.</p>
+        </div>
+        <div style="background:#0A0E14; padding:38px 34px;" data-reveal="dsh" data-reveal-i="3">
+          <h3 style="margin:0 0 6px; font-family:'Cormorant Garamond',serif; font-weight:600; font-size:23px; color:#FFFFF0;">Institutional affiliations</h3>
+          <p style="margin:0 0 14px; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:#9FC3E8;">Academic &amp; Clinical</p>
+          <p style="margin:0; font-size:14px; line-height:1.7; color:rgba(255,255,240,0.58);">Charit&eacute; &mdash; Universit&auml;tsmedizin Berlin, Paracelsus Medical University, and the OARSI research network, engaged at the research-collaboration level.</p>
+        </div>
+      </div>
+      <p style="margin:24px 0 0; font-size:13px; line-height:1.7; color:rgba(255,255,240,0.42); max-width:80ch;" data-reveal="dsh" data-reveal-i="4">All institutional relationships are described as research collaborations at their current early stage, and should not be read as endorsement or commercial partnership.</p>
+    </div>
+  </section>
+
+  <!-- ===================== PIPELINE TIMELINE ===================== -->
+  <section style="background:#080C12; padding:104px 44px; border-top:1px solid rgba(255,255,255,0.06);">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div style="text-align:center; margin-bottom:64px;" data-reveal="dsh" data-reveal-i="0">
+        <p style="margin:0 0 16px; font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:#9FC3E8;">Development Pipeline</p>
+        <div style="width:56px; height:2px; background:#9FC3E8; margin:0 auto 24px;"></div>
+        <h2 style="margin:0; font-family:'Cormorant Garamond',serif; font-weight:400; font-size:40px; color:#FFFFF0;">Where each programme sits</h2>
+      </div>
+      <div data-reveal="dsh" data-reveal-i="1" style="position:relative; display:grid; grid-template-columns:repeat(4,1fr); gap:0; margin-bottom:40px;">
+        <div style="position:absolute; top:13px; left:12%; right:12%; height:1px; background:rgba(159,195,232,0.3);"></div>
+        <sc-for list="{{ stages }}" as="s" hint-placeholder-count="4">
+          <div style="position:relative; text-align:center; padding:0 12px;">
+            <div style="width:26px; height:26px; border-radius:50%; margin:0 auto 22px; background:{{ s.dot }}; border:2px solid {{ s.ring }}; box-shadow:{{ s.glow }};"></div>
+            <p style="margin:0 0 6px; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:{{ s.labelColor }};">{{ s.label }}</p>
+            <p style="margin:0; font-size:13px; line-height:1.6; color:rgba(255,255,240,0.5);">{{ s.note }}</p>
+          </div>
+        </sc-for>
+      </div>
+      <div style="display:flex; gap:30px; justify-content:center; flex-wrap:wrap;" data-reveal="dsh" data-reveal-i="2">
+        <div style="display:flex; align-items:center; gap:10px;"><span style="width:14px; height:14px; border-radius:50%; background:#9FC3E8;"></span><span style="font-size:13px; color:rgba(255,255,240,0.62);">ACL scaffold &mdash; feasibility study</span></div>
+        <div style="display:flex; align-items:center; gap:10px;"><span style="width:14px; height:14px; border-radius:50%; background:#E2C268;"></span><span style="font-size:13px; color:rgba(255,255,240,0.62);">Nerve conduit &mdash; early investigation</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== METHODOLOGY NOTE ===================== -->
+  <section style="background:#0A0E14; padding:96px 44px; border-top:1px solid rgba(255,255,255,0.06);">
+    <div style="max-width:840px; margin:0 auto; text-align:center;" data-reveal="dsh" data-reveal-i="0">
+      <p style="margin:0 0 22px; font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:#9FC3E8;">Methodology</p>
+      <p style="margin:0 0 30px; font-family:'Cormorant Garamond',serif; font-weight:400; font-style:italic; font-size:30px; line-height:1.4; color:#FFFFF0;">We are committed to transparent, peer-reviewed science &mdash; rigorous data integrity, honest reporting of stage and limitation, and publication of results as the programmes mature.</p>
+      <a href="contact.dc.html" style="display:inline-block; text-decoration:none; font-size:13px; letter-spacing:0.18em; text-transform:uppercase; color:#0A0E14; background:#9FC3E8; padding:16px 32px; border-radius:2px; transition:background 240ms;" style-hover="background:#B9D5F0;">Research &amp; clinical inquiries</a>
+    </div>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,560px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    const els = Array.from(document.querySelectorAll('[data-reveal="dsh"]'));
+    els.forEach(e => {
+      e.style.opacity = '0';
+      e.style.transform = 'translateY(24px)';
+      e.style.transition = 'opacity 760ms cubic-bezier(0.22,0.61,0.36,1), transform 760ms cubic-bezier(0.22,0.61,0.36,1)';
+    });
+    const show = (e) => { e.style.opacity = '1'; e.style.transform = 'none'; };
+    if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      els.forEach(show); return;
+    }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(en => {
+        if (en.isIntersecting) {
+          const i = Number(en.target.getAttribute('data-reveal-i') || 0);
+          en.target.style.transitionDelay = (i * 85) + 'ms';
+          show(en.target); io.unobserve(en.target);
+        }
+      });
+    }, { threshold: 0.14 });
+    els.forEach(e => io.observe(e));
+    this._fallback = setTimeout(() => els.forEach(show), 1800);
+  }
+  componentWillUnmount() { if (this._fallback) clearTimeout(this._fallback); }
+  renderVals() {
+    const blue = '#9FC3E8', gold = '#E2C268';
+    return {
+      stages: [
+        { label:'Feasibility', note:'Material & geometry validation', dot:blue, ring:blue, glow:'0 0 0 5px rgba(159,195,232,0.18)', labelColor:'#FFFFF0' },
+        { label:'Pre-clinical', note:'In vivo testing & safety', dot:'#0A0E14', ring:'rgba(159,195,232,0.5)', glow:'none', labelColor:'rgba(255,255,240,0.7)' },
+        { label:'Regulatory', note:'Submission & review', dot:'#0A0E14', ring:'rgba(255,255,255,0.22)', glow:'none', labelColor:'rgba(255,255,240,0.55)' },
+        { label:'Clinical trial', note:'First-in-human study', dot:'#0A0E14', ring:'rgba(255,255,255,0.22)', glow:'none', labelColor:'rgba(255,255,240,0.55)' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
