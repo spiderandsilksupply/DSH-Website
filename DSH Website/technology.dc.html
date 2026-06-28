@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  html, body { margin:0; padding:0; background:#0B0B0C; }
+  ::selection { background:#B8860B; color:#0B0B0C; }
+</style>
+</helmet>
+<div style="background:#0B0B0C; color:#FFFFF0; font-family:'Jost',sans-serif; overflow-x:hidden;">
+  <dc-import name="Header" active="technology" hint-size="100%,84px"></dc-import>
+
+  <!-- ===================== HERO ===================== -->
+  <section data-screen-label="Technology Hero" style="position:relative; min-height:72vh; display:flex; align-items:flex-end; background:linear-gradient(180deg, rgba(11,11,12,0.72) 0%, rgba(11,11,12,0.45) 42%, rgba(11,11,12,0.97) 100%), url(https://images.unsplash.com/photo-1624363153544-fe5fe097e870?fm=jpg&q=80&w=2200&auto=format&fit=crop); background-size:cover; background-position:center;">
+    <div style="max-width:1180px; width:100%; margin:0 auto; padding:0 44px 90px;">
+      <p style="margin:0 0 16px; font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:#E2C268;">Technology</p>
+      <div style="width:56px; height:2px; background:#B8860B; margin-bottom:28px;"></div>
+      <h1 style="margin:0 0 24px; font-family:'Cormorant Garamond',serif; font-weight:400; font-size:62px; line-height:1.08; color:#FFFFF0; max-width:18ch;">The science is real. The material delivers.</h1>
+      <p style="margin:0; font-size:18px; line-height:1.7; color:rgba(255,255,240,0.74); max-width:62ch;">A clear, honest account of what spider silk is, what it can do, and why it is so difficult to replace &mdash; written to be understood, not to impress.</p>
+    </div>
+  </section>
+
+  <!-- ===================== SPIDER SILK 101 ===================== -->
+  <section style="background:#0B0B0C; padding:116px 44px; border-top:1px solid rgba(255,255,255,0.06);">
+    <div style="max-width:1180px; margin:0 auto; display:grid; grid-template-columns:0.85fr 1.15fr; gap:80px; align-items:start;">
+      <div data-reveal="dsh" data-reveal-i="0">
+        <p style="margin:0 0 16px; font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:#B8860B;">Spider Silk 101</p>
+        <div style="width:56px; height:2px; background:#B8860B; margin-bottom:26px;"></div>
+        <h2 style="margin:0; font-family:'Cormorant Garamond',serif; font-weight:400; font-size:42px; line-height:1.16; color:#FFFFF0;">A protein fibre nature spent millions of years perfecting</h2>
+      </div>
+      <div data-reveal="dsh" data-reveal-i="1">
+        <p style="margin:0 0 22px; font-size:17px; line-height:1.8; color:rgba(255,255,240,0.72);">Spider silk is a protein-based fibre produced in specialised glands of certain spider species. Unlike silkworm silk, it combines high tensile strength, elasticity, and biocompatibility in a way that is nearly impossible to replicate synthetically.</p>
+        <p style="margin:0; font-size:17px; line-height:1.8; color:rgba(255,255,240,0.72);">The secret is its molecular structure: hard, ordered <strong style="color:#FFFFF0; font-weight:500;">beta-sheet crystalline regions</strong> embedded in a soft, <strong style="color:#FFFFF0; font-weight:500;">amorphous matrix</strong>. The crystals give stiffness; the matrix gives stretch. Together they produce a rare combination of strength and toughness that engineers have chased for decades.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MECHANICAL PROPERTIES ===================== -->
+  <section style="background:#0E0E10; padding:110px 44px; border-top:1px solid rgba(255,255,255,0.06);">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div style="text-align:center; margin-bottom:60px;" data-reveal="dsh" data-reveal-i="0">
+        <p style="margin:0 0 16px; font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:#B8860B;">Mechanical Properties</p>
+        <div style="width:56px; height:2px; background:#B8860B; margin:0 auto 24px;"></div>
+        <h2 style="margin:0; font-family:'Cormorant Garamond',serif; font-weight:400; font-size:42px; color:#FFFFF0;">How it compares</h2>
+      </div>
+      <div data-reveal="dsh" data-reveal-i="1" style="display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:1px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.08);">
+        <div style="background:#0E0E10; padding:18px 24px;"></div>
+        <div style="background:#141416; padding:18px 22px; text-align:center;"><span style="font-size:12px; letter-spacing:0.1em; color:#E2C268;">Tensile strength</span></div>
+        <div style="background:#141416; padding:18px 22px; text-align:center;"><span style="font-size:12px; letter-spacing:0.1em; color:#E2C268;">Young's modulus</span></div>
+        <div style="background:#141416; padding:18px 22px; text-align:center;"><span style="font-size:12px; letter-spacing:0.1em; color:#E2C268;">Elongation</span></div>
+        <sc-for list="{{ rows }}" as="r" hint-placeholder-count="4">
+          <div style="background:{{ r.bg }}; padding:22px 24px; display:flex; align-items:center;"><span style="font-size:15px; color:{{ r.nameColor }}; font-weight:{{ r.weight }};">{{ r.name }}</span></div>
+          <div style="background:{{ r.bg }}; padding:22px 22px; text-align:center;"><span style="font-size:14px; color:rgba(255,255,240,0.7);">{{ r.ts }}</span></div>
+          <div style="background:{{ r.bg }}; padding:22px 22px; text-align:center;"><span style="font-size:14px; color:rgba(255,255,240,0.7);">{{ r.ym }}</span></div>
+          <div style="background:{{ r.bg }}; padding:22px 22px; text-align:center;"><span style="font-size:14px; color:rgba(255,255,240,0.7);">{{ r.el }}</span></div>
+        </sc-for>
+      </div>
+      <p style="margin:18px 0 0; font-size:12px; color:rgba(255,255,240,0.4);" data-reveal="dsh" data-reveal-i="2">Representative literature values; actual performance varies with species, hydration, and test conditions.</p>
+    </div>
+  </section>
+
+  <!-- ===================== BIOCOMPATIBILITY ===================== -->
+  <section style="background:#0B0B0C; padding:116px 44px; border-top:1px solid rgba(255,255,255,0.06);">
+    <div style="max-width:1180px; margin:0 auto; display:grid; grid-template-columns:1.15fr 0.85fr; gap:80px; align-items:start;">
+      <div data-reveal="dsh" data-reveal-i="0">
+        <p style="margin:0 0 16px; font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:#B8860B;">Biocompatibility &amp; Biodegradation</p>
+        <div style="width:56px; height:2px; background:#B8860B; margin-bottom:26px;"></div>
+        <h2 style="margin:0 0 24px; font-family:'Cormorant Garamond',serif; font-weight:400; font-size:42px; line-height:1.14; color:#FFFFF0;">Designed to disappear on schedule</h2>
+        <p style="margin:0 0 20px; font-size:16px; line-height:1.8; color:rgba(255,255,240,0.72);">Spider silk is not rejected by the human immune system at the level of clinically relevant concern &mdash; one of the properties that makes it so promising for implantable scaffolds.</p>
+        <p style="margin:0; font-size:16px; line-height:1.8; color:rgba(255,255,240,0.72);">It degrades over a controllable period &mdash; weeks to months depending on processing &mdash; which is exactly what scaffolding needs: the material should gradually hand off load to regenerating tissue, then resorb. We pair what the research literature reports with our own characterisation data.</p>
+      </div>
+      <div data-reveal="dsh" data-reveal-i="1" style="background:#101012; border:1px solid rgba(255,255,255,0.08); border-radius:4px; padding:40px 38px;">
+        <p style="margin:0 0 26px; font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:rgba(255,255,240,0.55);">Degradation profile</p>
+        <div style="position:relative; height:160px; border-left:1px solid rgba(255,255,255,0.15); border-bottom:1px solid rgba(255,255,255,0.15); margin-bottom:14px;">
+          <svg viewBox="0 0 300 150" width="100%" height="160" preserveAspectRatio="none" style="display:block;">
+            <path d="M0 12 C 80 12, 150 60, 300 142" stroke="#E2C268" stroke-width="2" fill="none"></path>
+            <path d="M0 12 C 80 12, 150 60, 300 142 L300 150 L0 150 Z" fill="url(#g)" opacity="0.15"></path>
+            <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E2C268"></stop><stop offset="1" stop-color="#E2C268" stop-opacity="0"></stop></linearGradient></defs>
+          </svg>
+        </div>
+        <div style="display:flex; justify-content:space-between; font-size:11px; color:rgba(255,255,240,0.5);"><span>Implant</span><span>Weeks</span><span>Months</span></div>
+        <p style="margin:22px 0 0; font-size:13px; line-height:1.6; color:rgba(255,255,240,0.5);">Strength is retained early, then declines predictably as native tissue takes over.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROCESSING & FABRICATION ===================== -->
+  <section style="background:#0E0E10; padding:110px 44px; border-top:1px solid rgba(255,255,255,0.06);">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div style="text-align:center; margin-bottom:60px;" data-reveal="dsh" data-reveal-i="0">
+        <p style="margin:0 0 16px; font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:#B8860B;">Processing &amp; Fabrication</p>
+        <div style="width:56px; height:2px; background:#B8860B; margin:0 auto 24px;"></div>
+        <h2 style="margin:0 auto; font-family:'Cormorant Garamond',serif; font-weight:400; font-size:42px; line-height:1.14; color:#FFFFF0; max-width:24ch;">One fibre, many forms</h2>
+        <p style="margin:18px auto 0; max-width:64ch; font-size:16px; line-height:1.7; color:rgba(255,255,240,0.66);">The same base material becomes a medical scaffold or a luxury textile depending entirely on the fabrication approach.</p>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.08);">
+        <div style="background:#0E0E10; padding:40px 30px;" data-reveal="dsh" data-reveal-i="1">
+          <p style="margin:0 0 12px; font-family:'Cormorant Garamond',serif; font-size:24px; color:#FFFFF0;">Electrospinning</p>
+          <p style="margin:0; font-size:14px; line-height:1.7; color:rgba(255,255,240,0.58);">Draws ultra-fine fibres into porous mats &mdash; ideal for cell-friendly scaffold surfaces.</p>
+        </div>
+        <div style="background:#0E0E10; padding:40px 30px;" data-reveal="dsh" data-reveal-i="2">
+          <p style="margin:0 0 12px; font-family:'Cormorant Garamond',serif; font-size:24px; color:#FFFFF0;">Braiding</p>
+          <p style="margin:0; font-size:14px; line-height:1.7; color:rgba(255,255,240,0.58);">Bundles fibres into load-bearing structures that mimic native ligament architecture.</p>
+        </div>
+        <div style="background:#0E0E10; padding:40px 30px;" data-reveal="dsh" data-reveal-i="3">
+          <p style="margin:0 0 12px; font-family:'Cormorant Garamond',serif; font-size:24px; color:#FFFFF0;">Weaving</p>
+          <p style="margin:0; font-size:14px; line-height:1.7; color:rgba(255,255,240,0.58);">Turns treated fibre into textile with couture-grade hand, drape, and sheen.</p>
+        </div>
+        <div style="background:#0E0E10; padding:40px 30px;" data-reveal="dsh" data-reveal-i="4">
+          <p style="margin:0 0 12px; font-family:'Cormorant Garamond',serif; font-size:24px; color:#FFFFF0;">Tubular forming</p>
+          <p style="margin:0; font-size:14px; line-height:1.7; color:rgba(255,255,240,0.58);">Shapes conduits with controlled porosity for nerve-repair applications.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SUSTAINABILITY ===================== -->
+  <section style="background:#0B0B0C; padding:110px 44px; border-top:1px solid rgba(255,255,255,0.06);">
+    <div style="max-width:1180px; margin:0 auto; text-align:center;">
+      <div style="margin-bottom:56px;" data-reveal="dsh" data-reveal-i="0">
+        <p style="margin:0 0 16px; font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:#B8860B;">Sustainability Credentials</p>
+        <div style="width:56px; height:2px; background:#B8860B; margin:0 auto 24px;"></div>
+        <h2 style="margin:0; font-family:'Cormorant Garamond',serif; font-weight:400; font-size:42px; color:#FFFFF0;">Clean by construction</h2>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:22px;">
+        <div data-reveal="dsh" data-reveal-i="1" style="padding:14px;"><p style="margin:0 0 10px; font-family:'Cormorant Garamond',serif; font-size:21px; color:#E2C268;">No synthetic chemistry</p><p style="margin:0; font-size:14px; line-height:1.7; color:rgba(255,255,240,0.58);">The fibre is grown, not formulated.</p></div>
+        <div data-reveal="dsh" data-reveal-i="2" style="padding:14px;"><p style="margin:0 0 10px; font-family:'Cormorant Garamond',serif; font-size:21px; color:#E2C268;">No petrochemicals</p><p style="margin:0; font-size:14px; line-height:1.7; color:rgba(255,255,240,0.58);">Nothing drawn from fossil feedstocks.</p></div>
+        <div data-reveal="dsh" data-reveal-i="3" style="padding:14px;"><p style="margin:0 0 10px; font-family:'Cormorant Garamond',serif; font-size:21px; color:#E2C268;">Naturally biodegradable</p><p style="margin:0; font-size:14px; line-height:1.7; color:rgba(255,255,240,0.58);">Returns to nature without microplastic residue.</p></div>
+        <div data-reveal="dsh" data-reveal-i="4" style="padding:14px;"><p style="margin:0 0 10px; font-family:'Cormorant Garamond',serif; font-size:21px; color:#E2C268;">Low land &amp; water</p><p style="margin:0; font-size:14px; line-height:1.7; color:rgba(255,255,240,0.58);">A light footprint versus conventional silk or synthetics.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PUBLICATIONS ===================== -->
+  <section style="background:#0E0E10; padding:110px 44px; border-top:1px solid rgba(255,255,255,0.06);">
+    <div style="max-width:980px; margin:0 auto;">
+      <div style="margin-bottom:48px;" data-reveal="dsh" data-reveal-i="0">
+        <p style="margin:0 0 16px; font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:#B8860B;">Publications &amp; Research</p>
+        <div style="width:56px; height:2px; background:#B8860B; margin-bottom:24px;"></div>
+        <h2 style="margin:0 0 18px; font-family:'Cormorant Garamond',serif; font-weight:400; font-size:40px; color:#FFFFF0;">Grounded in the literature</h2>
+        <p style="margin:0; font-size:16px; line-height:1.75; color:rgba(255,255,240,0.66); max-width:70ch;">Our approach rests on decades of peer-reviewed work on silk biomaterials. We cite the foundational science openly, and will publish our own results as the programmes mature &mdash; intellectual honesty is a trust signal we take seriously.</p>
+      </div>
+      <div data-reveal="dsh" data-reveal-i="1" style="display:grid; gap:1px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.08);">
+        <sc-for list="{{ pubs }}" as="p" hint-placeholder-count="4">
+          <div style="background:#0E0E10; padding:24px 30px; display:flex; gap:24px; align-items:baseline;">
+            <span style="font-family:'Cormorant Garamond',serif; font-size:18px; color:#B8860B; flex:none; width:30px;">{{ p.n }}</span>
+            <div>
+              <p style="margin:0 0 4px; font-size:15px; line-height:1.5; color:#FFFFF0;">{{ p.title }}</p>
+              <p style="margin:0; font-size:13px; color:rgba(255,255,240,0.5);">{{ p.cite }}</p>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+      <p style="margin:18px 0 0; font-size:12px; color:rgba(255,255,240,0.4);" data-reveal="dsh" data-reveal-i="2">Representative foundational references; a full bibliography is available to research partners on request.</p>
+    </div>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,560px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    const els = Array.from(document.querySelectorAll('[data-reveal="dsh"]'));
+    els.forEach(e => {
+      e.style.opacity = '0';
+      e.style.transform = 'translateY(24px)';
+      e.style.transition = 'opacity 760ms cubic-bezier(0.22,0.61,0.36,1), transform 760ms cubic-bezier(0.22,0.61,0.36,1)';
+    });
+    const show = (e) => { e.style.opacity = '1'; e.style.transform = 'none'; };
+    if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      els.forEach(show); return;
+    }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(en => {
+        if (en.isIntersecting) {
+          const i = Number(en.target.getAttribute('data-reveal-i') || 0);
+          en.target.style.transitionDelay = (i * 70) + 'ms';
+          show(en.target); io.unobserve(en.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    els.forEach(e => io.observe(e));
+    this._fallback = setTimeout(() => els.forEach(show), 1800);
+  }
+  componentWillUnmount() { if (this._fallback) clearTimeout(this._fallback); }
+  renderVals() {
+    const hi = '#15151A', lo = '#0E0E10';
+    return {
+      rows: [
+        { name:'Spider silk', ts:'~1.1 GPa', ym:'~10 GPa', el:'~27%', bg:'rgba(184,134,11,0.1)', nameColor:'#E2C268', weight:'600' },
+        { name:'High-tensile steel', ts:'~1.5 GPa', ym:'~200 GPa', el:'~8%', bg:lo, nameColor:'#FFFFF0', weight:'400' },
+        { name:'Kevlar', ts:'~3.6 GPa', ym:'~130 GPa', el:'~3%', bg:hi, nameColor:'#FFFFF0', weight:'400' },
+        { name:'Nylon', ts:'~0.07 GPa', ym:'~3 GPa', el:'~20%', bg:lo, nameColor:'#FFFFF0', weight:'400' }
+      ],
+      pubs: [
+        { n:'01', title:'Structure and mechanical behaviour of dragline spider silk', cite:'Foundational materials-science literature' },
+        { n:'02', title:'Silk-based biomaterials for tissue engineering and scaffolds', cite:'Peer-reviewed biomaterials reviews' },
+        { n:'03', title:'Silk fibroin nerve conduits and peripheral nerve regeneration', cite:'Neural-engineering literature' },
+        { n:'04', title:'Biocompatibility and degradation of silk protein implants', cite:'Regenerative-medicine literature' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

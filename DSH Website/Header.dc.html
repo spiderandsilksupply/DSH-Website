@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+</helmet>
+<header ref="{{ headerRef }}" style="position:fixed; top:0; left:0; right:0; z-index:200; display:flex; align-items:center; justify-content:space-between; padding:22px 44px; font-family:'Jost',sans-serif; background:transparent; border-bottom:1px solid transparent; transition:background 320ms cubic-bezier(0.22,0.61,0.36,1), padding 320ms cubic-bezier(0.22,0.61,0.36,1), border-color 320ms;">
+  <a href="home.dc.html" style="display:flex; align-items:center; text-decoration:none;">
+    <img src="assets/logo-mark.png" alt="Dubai Silk Holdings" style="height:92px; width:auto; object-fit:contain; display:block;" />
+  </a>
+  <nav style="display:flex; align-items:center; gap:34px;">
+    <sc-for list="{{ navItems }}" as="item" hint-placeholder-count="6">
+      <a href="{{ item.href }}" style="position:relative; text-decoration:none; font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:{{ item.color }}; padding-bottom:5px; border-bottom:1.5px solid {{ item.underline }}; transition:color 240ms;" style-hover="color:#E2C268;">{{ item.label }}</a>
+    </sc-for>
+  </nav>
+  <a href="contact.dc.html" style="text-decoration:none; font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:#FFFFF0; border:1px solid rgba(184,134,11,0.55); padding:11px 22px; border-radius:2px; transition:background 240ms, color 240ms, border-color 240ms;" style-hover="background:#B8860B; color:#2A1E02; border-color:#B8860B;">Partner with us</a>
+</header>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:84},&quot;active&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;home&quot;,&quot;about&quot;,&quot;projects&quot;,&quot;technology&quot;,&quot;investors&quot;,&quot;contact&quot;],&quot;default&quot;:&quot;home&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const el = this.headerEl;
+    if (!el) return;
+    const onScroll = () => {
+      if (window.scrollY > 36) {
+        el.style.background = 'rgba(11,11,12,0.88)';
+        el.style.backdropFilter = 'blur(12px)';
+        el.style.webkitBackdropFilter = 'blur(12px)';
+        el.style.borderBottomColor = 'rgba(255,255,255,0.09)';
+        el.style.padding = '15px 44px';
+      } else {
+        el.style.background = 'transparent';
+        el.style.backdropFilter = 'none';
+        el.style.webkitBackdropFilter = 'none';
+        el.style.borderBottomColor = 'transparent';
+        el.style.padding = '22px 44px';
+      }
+    };
+    this._onScroll = onScroll;
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+  componentWillUnmount() {
+    if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
+  }
+  renderVals() {
+    const active = this.props.active || '';
+    const mk = (label, href, key) => ({
+      label, href,
+      color: key === active ? '#E2C268' : 'rgba(255,255,240,0.82)',
+      underline: key === active ? '#B8860B' : 'transparent'
+    });
+    return {
+      headerRef: (el) => { this.headerEl = el; },
+      navItems: [
+        mk('Home', 'home.dc.html', 'home'),
+        mk('About', 'about.dc.html', 'about'),
+        mk('Projects', 'projects.dc.html', 'projects'),
+        mk('Technology', 'technology.dc.html', 'technology'),
+        mk('Investors', 'investors.dc.html', 'investors'),
+        mk('Contact', 'contact.dc.html', 'contact')
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
