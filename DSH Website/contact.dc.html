@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  html, body { margin:0; padding:0; background:#0B0B0C; }
+  ::selection { background:#B8860B; color:#0B0B0C; }
+</style>
+</helmet>
+<div style="background:#0B0B0C; color:#FFFFF0; font-family:'Jost',sans-serif; overflow-x:hidden;">
+  <dc-import name="Header" active="contact" hint-size="100%,84px"></dc-import>
+
+  <!-- ===================== HERO ===================== -->
+  <section data-screen-label="Contact Hero" style="position:relative; padding:196px 44px 90px; border-bottom:1px solid rgba(255,255,255,0.06); background:radial-gradient(120% 90% at 50% 0%, rgba(184,134,11,0.12), rgba(11,11,12,0) 58%);">
+    <div style="max-width:920px; margin:0 auto; text-align:center;">
+      <p style="margin:0 0 18px; font-size:12px; letter-spacing:0.32em; text-transform:uppercase; color:#E2C268;">Contact</p>
+      <h1 style="margin:0 0 24px; font-family:'Cormorant Garamond',serif; font-weight:400; font-size:60px; line-height:1.08; color:#FFFFF0;">Let's find the right thread</h1>
+      <p style="margin:0 auto; font-size:18px; line-height:1.7; color:rgba(255,255,240,0.72); max-width:54ch;">Choose the route that fits your inquiry &mdash; it reaches the right desk directly, so nothing lands in a generic inbox and disappears.</p>
+    </div>
+  </section>
+
+  <!-- ===================== FOUR INQUIRY TYPES ===================== -->
+  <section style="background:#0B0B0C; padding:96px 44px;">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:22px;">
+        <sc-for list="{{ routes }}" as="r" hint-placeholder-count="4">
+          <a href="{{ r.mailto }}" data-reveal="dsh" data-reveal-i="{{ r.i }}" style="display:block; text-decoration:none; background:#101012; border:1px solid rgba(255,255,255,0.08); border-radius:4px; padding:42px 40px; transition:border-color 240ms, transform 240ms;" style-hover="border-color:rgba(184,134,11,0.55); transform:translateY(-3px);">
+            <p style="margin:0 0 14px; font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:#E2C268;">{{ r.kicker }}</p>
+            <h3 style="margin:0 0 14px; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:28px; color:#FFFFF0;">{{ r.title }}</h3>
+            <p style="margin:0 0 22px; font-size:15px; line-height:1.7; color:rgba(255,255,240,0.6);">{{ r.body }}</p>
+            <span style="font-size:13px; letter-spacing:0.04em; color:#B8860B; border-bottom:1px solid rgba(184,134,11,0.4); padding-bottom:4px;">{{ r.email }}</span>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== LOCATION / STRUCTURE ===================== -->
+  <section style="background:#0E0E10; padding:104px 44px; border-top:1px solid rgba(255,255,255,0.06);">
+    <div style="max-width:1180px; margin:0 auto; display:grid; grid-template-columns:0.85fr 1.15fr; gap:80px; align-items:start;">
+      <div data-reveal="dsh" data-reveal-i="0">
+        <p style="margin:0 0 16px; font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:#B8860B;">Location &amp; Structure</p>
+        <div style="width:56px; height:2px; background:#B8860B; margin-bottom:26px;"></div>
+        <h2 style="margin:0 0 20px; font-family:'Cormorant Garamond',serif; font-weight:400; font-size:38px; line-height:1.16; color:#FFFFF0;">A platform across three countries</h2>
+        <p style="margin:0; font-size:16px; line-height:1.8; color:rgba(255,255,240,0.68);">DSH operates across Dubai, Taiwan, and Australia &mdash; with the joint venture centred in Dubai. For legal and corporate correspondence, please use the registered office below.</p>
+      </div>
+      <div data-reveal="dsh" data-reveal-i="1">
+        <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.08); margin-bottom:22px;">
+          <div style="background:#0E0E10; padding:26px 30px;"><p style="margin:0 0 6px; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#E2C268;">Dubai</p><p style="margin:0; font-size:14px; color:rgba(255,255,240,0.62);">Joint venture &amp; market</p></div>
+          <div style="background:#0E0E10; padding:26px 30px;"><p style="margin:0 0 6px; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#E2C268;">Taiwan</p><p style="margin:0; font-size:14px; color:rgba(255,255,240,0.62);">Research &amp; production</p></div>
+          <div style="background:#0E0E10; padding:26px 30px;"><p style="margin:0 0 6px; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#E2C268;">Australia</p><p style="margin:0; font-size:14px; color:rgba(255,255,240,0.62);">Medtech subsidiary</p></div>
+        </div>
+        <div style="background:#101012; border:1px solid rgba(184,134,11,0.25); border-radius:4px; padding:28px 32px;">
+          <p style="margin:0 0 8px; font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:#B8860B;">Registered office</p>
+          <p style="margin:0; font-size:15px; line-height:1.7; color:rgba(255,255,240,0.72);">Dubai Silk Holdings &mdash; c/o registered office, Dubai, UAE.<br/>For corporate &amp; legal correspondence only.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== RESPONSE + MEDIA KIT ===================== -->
+  <section style="background:#0B0B0C; padding:104px 44px; border-top:1px solid rgba(255,255,255,0.06);">
+    <div style="max-width:1180px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:22px;">
+      <div data-reveal="dsh" data-reveal-i="0" style="background:#101012; border:1px solid rgba(255,255,255,0.08); border-radius:4px; padding:54px 48px; text-align:center; display:flex; flex-direction:column; justify-content:center;">
+        <p style="margin:0 0 14px; font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#B8860B;">Response Commitment</p>
+        <p style="margin:0 0 10px; font-family:'Cormorant Garamond',serif; font-size:42px; line-height:1.1; color:#FFFFF0;">Within <span style="color:#E2C268;">five</span> business days</p>
+        <p style="margin:0; font-size:15px; line-height:1.7; color:rgba(255,255,240,0.6);">We respond to every inquiry &mdash; whatever the route.</p>
+      </div>
+      <div data-reveal="dsh" data-reveal-i="1" style="background:#101012; border:1px solid rgba(255,255,255,0.08); border-radius:4px; padding:54px 48px; display:flex; flex-direction:column; justify-content:center;">
+        <p style="margin:0 0 14px; font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#B8860B;">Media Kit</p>
+        <h3 style="margin:0 0 14px; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:30px; color:#FFFFF0;">Press-ready assets</h3>
+        <p style="margin:0 0 26px; font-size:15px; line-height:1.7; color:rgba(255,255,240,0.62);">Logos, headshots, the one-pager, and key facts &mdash; everything a journalist needs, in one download.</p>
+        <a href="#" style="align-self:flex-start; text-decoration:none; font-size:13px; letter-spacing:0.18em; text-transform:uppercase; color:#2A1E02; background:#B8860B; padding:15px 30px; border-radius:2px; transition:background 240ms;" style-hover="background:#C99A1F;">Download media kit</a>
+      </div>
+    </div>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,560px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    const els = Array.from(document.querySelectorAll('[data-reveal="dsh"]'));
+    els.forEach(e => {
+      e.style.opacity = '0';
+      e.style.transform = 'translateY(24px)';
+      e.style.transition = 'opacity 760ms cubic-bezier(0.22,0.61,0.36,1), transform 760ms cubic-bezier(0.22,0.61,0.36,1)';
+    });
+    const show = (e) => { e.style.opacity = '1'; e.style.transform = 'none'; };
+    if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      els.forEach(show); return;
+    }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(en => {
+        if (en.isIntersecting) {
+          const i = Number(en.target.getAttribute('data-reveal-i') || 0);
+          en.target.style.transitionDelay = (i * 85) + 'ms';
+          show(en.target); io.unobserve(en.target);
+        }
+      });
+    }, { threshold: 0.14 });
+    els.forEach(e => io.observe(e));
+    this._fallback = setTimeout(() => els.forEach(show), 1800);
+  }
+  componentWillUnmount() { if (this._fallback) clearTimeout(this._fallback); }
+  renderVals() {
+    return {
+      routes: [
+        { i:0, kicker:'Route 01', title:'Investors & capital partners', body:'For financial investors, the data room, and strategic capital conversations.', email:'invest@dubaisilkholdings.com', mailto:'mailto:invest@dubaisilkholdings.com' },
+        { i:1, kicker:'Route 02', title:'Research & clinical collaboration', body:'For academic and clinical partners exploring the medical programmes.', email:'research@dubaisilkholdings.com', mailto:'mailto:research@dubaisilkholdings.com' },
+        { i:2, kicker:'Route 03', title:'Fashion, press & retail', body:'For buyers, stockists, and editorial requests on the luxury line.', email:'atelier@dubaisilkholdings.com', mailto:'mailto:atelier@dubaisilkholdings.com' },
+        { i:3, kicker:'Route 04', title:'General & supply chain', body:'For supply agreements, licensing, and everything else.', email:'supply@dubaisilkholdings.com', mailto:'mailto:supply@dubaisilkholdings.com' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
